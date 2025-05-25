@@ -1,0 +1,68 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Genes-WORLD Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-29 20:18+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.1\n"
+"X-Domain: genes-world-plugin"
+
+#. Description of the plugin
+msgid "Admin plugin for Genes-WORLD  project"
+msgstr ""
+
+#. parent slug
+#. page title
+#: admin/class-genes-world-plugin-admin.php:120
+#: admin/class-genes-world-plugin-admin.php:121
+msgid "Genes WORLD"
+msgstr ""
+
+#. Name of the plugin
+msgid "Genes-WORLD Plugin"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://example.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "http://example.com/genes-world-plugin-uri/"
+msgstr ""
+
+#: admin/partials/form-settings.php:51
+msgid "Notification email"
+msgstr ""
+
+#: public/partials/genes-world-public-geodata.php:110
+msgid "Select layer 1 filter type:"
+msgstr ""
+
+#: public/partials/genes-world-public-geodata.php:50
+msgid "Select SOME TYPE11:"
+msgstr ""
+
+#: admin/partials/form-settings.php:33
+msgid "Settings"
+msgstr ""
+
+#: public/partials/genes-world-public-geodata.php:143
+msgid "Sorry, not enough data found to build the chart..."
+msgstr ""
+
+#: admin/partials/genes-world-plugin-admin-display.php:41
+msgid "Upload"
+msgstr ""
+
+#. Author of the plugin
+msgid "UzhNU"
+msgstr ""

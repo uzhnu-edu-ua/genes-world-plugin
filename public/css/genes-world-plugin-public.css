@@ -1,0 +1,367 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+ /* REPORT LOGIN */
+
+ .entry-content .bu-checkbox {
+	font-size: 16px;
+	display: flex;
+	align-items: flex-start;
+    gap: 8px;
+ }
+
+ .entry-content .bu-checkbox a {
+	text-decoration: underline;
+ }
+
+ .entry-content {
+	--wp--style--global--content-size: 1400px;
+ }
+
+ /* REPORT */
+
+.genes-report dl {
+	font-size: 16px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4px 0;
+    margin-bottom: 50px;
+}
+
+.genes-report dl > * {
+	background: #fff;
+	padding: 3px 20px;
+}
+
+@media screen and (max-width: 500px) {
+	.genes-report dl {
+		font-size: 14px;
+	}
+
+	.genes-report dl > * {
+		padding: 3px 10px;
+	}
+
+	.bu-select.js-form-geodata-type {
+		font-size: 15px;
+	}
+}
+
+.genes-report dl > :nth-of-type(2n) {
+	background: #f8f8f8;
+}
+
+.genes-report dt {
+	font-weight: 700;
+}
+
+.genes-report dd {
+	margin: 0;
+	padding: 5px 20px;
+	display: flex;
+	align-items: center;
+    word-break: break-word;
+}
+
+.bu-message h3 {
+	margin-block-start: 0.2em;
+	margin-block-end: 0.2em;
+}
+
+.bu-message h3 {
+	color: inherit;
+}
+
+.genes-report summary {
+	cursor: pointer;
+	color: var(--wp--preset--color--vivid-cyan-blue);
+	transition: color 0.2s;
+}
+
+.genes-report summary:hover {
+	color: var(--wp--preset--color--pale-cyan-blue);
+}
+
+@media print {
+	header .wp-block-navigation,
+	header .wp-block-buttons,
+	footer,
+	.js-btn-print-report,
+	.wp-block-button,
+	.wp-block-button__link {
+		display: none;
+	}
+
+	body {
+		--wp--preset--font-size--small: 14px;
+		--wp--preset--font-size--large: 26px;
+		--wp--preset--font-size--xx-large: 36px;
+	}
+
+	.genes-report dl > :nth-of-type(2n) {
+		background: none;
+	}
+
+	.genes-report dl {
+		gap: 0;
+	}
+
+	.wp-block-spacer {
+		height: 50px !important;
+		margin: 0;
+	}
+}
+
+/* DASHBOARD */
+
+.date-last-updated {
+	text-align: right;
+	font-size: 12px;
+	color: grey;
+}
+
+.c3-axis-x-label,
+.c3-axis-y-label {
+	font-size: 14px;
+}
+
+#sexChart,
+#caseChart,
+#rollingSamplesChart,
+#icaUmlChart {
+	height: 400px;
+}
+
+#yearsOfDiabeteChart,
+#cPeptideChart {
+	height: 600px;
+}
+
+#yearsOnsetChart {
+	height: 750px;
+}
+
+/* GEODATA */
+
+#map {
+	height: min(600px, 100vh);
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+	font-size: 20px;
+    color: #777;
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.6;
+}
+
+.is-hidden {
+	display: none !important;
+}
+
+.is-disabled {
+	opacity: 0.2;
+}
+
+.map-feature-details__chart #yearsOfDiabeteChart,
+.map-feature-details__chart #cPeptideChart {
+	height: 400px;
+}
+
+.map-feature-details__chart #yearsOnsetChart {
+	height: 400px;
+}
+
+.bu-menu-list {
+	list-style: none;
+	padding: 0;
+}
+
+.map-top-controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.map-top-controls .bu-button {
+	gap: 10px;
+	margin-bottom: .75rem;
+}
+
+.is-layout-fullscreen {
+    --wp--style--global--content-size: 1920px;
+}
+
+
+@media screen and (min-width: 1200px) {
+	.is-layout-fullscreen .geo-data-layout {
+		display: flex;
+		gap: 20px
+	}
+
+	.is-layout-fullscreen #map,
+	.is-layout-fullscreen .map-feature-details-wrapper {
+		width: calc(50% - 10px);
+	}
+
+	.is-layout-fullscreen #map-feature-details {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#map-feature-details {
+		display: flex; 
+		gap: 20px;
+	}
+}
+
+.map-feature-details__info { grid-area: info; }
+.map-feature-details__menu { grid-area: menu; }
+.map-feature-details__charts-wrapper { grid-area: chart; }
+
+/* GRID-JS */
+
+td.gridjs-td,
+th.gridjs-th {
+	padding: 6px 12px;
+}
+
+th.gridjs-th .gridjs-th-content {
+	padding-top: 2px;
+}
+
+table.gridjs-table {
+	width: auto; /* fix broken table width on dynamic update  */
+}
+
+.gridjs-footer {
+	box-shadow: none;
+	font-size: 12px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.gridjs-wrapper {
+	box-shadow: none;
+	font-size: 12px;
+}
+
+.gridjs-tr:hover td {
+	background-color: #fffaed;
+	cursor: pointer;
+}
+
+.gridjs-tr.active td {
+	background-color: #fff0ca;
+}
+
+.gridjs-tr td {
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th.gridjs-th .gridjs-th-content {
+	white-space: initial;
+	text-align: center;
+}
+
+.exit-region-view-btn,
+.grid-row-info {
+	display: none;
+}
+
+th[data-column-id="country_origin"] {
+	width: 100px;
+}
+
+th[data-column-id="population_name"],
+th[data-column-id="technology"]  {
+	width: 80px;
+}
+
+th[data-column-id="coverage"],
+th[data-column-id="n_pub_available"],
+th[data-column-id="n_available_upon_request"] {
+	width: 70px;
+}
+
+th[data-column-id="has_reads"],
+th[data-column-id="has_variants"],
+th[data-column-id="has_summary"],
+th[data-column-id="centralized_project"],
+th[data-column-id="year"] {
+	width: 50px;
+}
+
+@media screen and (min-width: 1024px) {
+	th[data-column-id="country_origin"] {
+		width: 150px;
+	}
+	
+	th[data-column-id="population_name"],
+	th[data-column-id="technology"]  {
+		width: 120px;
+	}
+	
+	th[data-column-id="coverage"],
+	th[data-column-id="n_pub_available"],
+	th[data-column-id="n_available_upon_request"] {
+		width: 100px;
+	}
+	
+	th[data-column-id="has_reads"],
+	th[data-column-id="has_variants"],
+	th[data-column-id="has_summary"],
+	th[data-column-id="centralized_project"],
+	th[data-column-id="year"] {
+		width: 70px;
+	}
+}
+
+td[data-column-id="coverage"],
+td[data-column-id="nOfPubliclyAvailable"],
+td[data-column-id="nOfAvailableUponRequest"] {
+	text-align: right;
+}
+
+td[data-column-id="reads"],
+td[data-column-id="variants"],
+td[data-column-id="summaryStatistics"],
+td[data-column-id="genomeProjectType"] {
+	text-align: center;
+}
+
+.c-green {
+	color: #00bc00;
+}
+
+.c-red {
+	color: #f10030;
+}
+
+.c-dimmed {
+	color: #b5b5b5;
+}
